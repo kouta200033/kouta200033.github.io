@@ -1,260 +1,84 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@KKW333 | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@KKW333 | Advanced Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav>
-    <div class="logo">@KKW333</div>
-
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<nav class="navbar">
+  <div class="logo">@KKW333</div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="theme-toggle">🌙</button>
 </nav>
 
 <header class="hero">
-
-    <div class="hero-content">
-
-        <span class="tag">
-            IT Portfolio
-        </span>
-
-        <h1>@KKW333</h1>
-
-        <p class="subtitle">
-            IT・Security・Programming
-        </p>
-
-        <p class="hero-text">
-            IT技術、セキュリティ、プログラミングに興味を持ち、
-            継続的な学習と資格取得を通じてスキル向上に取り組んでいます。
-        </p>
-
-        <a href="#about" class="btn">
-            Learn More
-        </a>
-
-    </div>
-
+  <div class="hero-content">
+    <span class="badge">Portfolio 2026</span>
+    <h1>Hello, I'm <span>@KKW333</span></h1>
+    <h2 id="typing"></h2>
+    <p>IT・セキュリティ・プログラミングを中心に継続学習中。</p>
+  </div>
 </header>
 
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <div class="glass-card">
-
-        <p>
-            はじめまして、@KKW333です。
-        </p>
-
-        <p>
-            IT分野に強い関心を持ち、基本情報技術者試験や
-            情報セキュリティマネジメント試験、
-            Python3エンジニア認定基礎試験などの資格を取得してきました。
-        </p>
-
-        <p>
-            現在はJavaの学習にも取り組んでおり、
-            プログラミングやソフトウェア開発に関する知識・技術の習得を進めています。
-        </p>
-
-        <p>
-            技術力だけでなく、継続的な学習姿勢や問題解決能力を大切にしながら、
-            日々新しい知識の習得に取り組んでいます。
-        </p>
-
-    </div>
-
+<section class="fade" id="about">
+<h2>About Me</h2>
+<div class="glass-card">
+<p>基本情報技術者試験、情報セキュリティマネジメント試験、Python3エンジニア認定基礎試験などを取得。</p>
+<p>現在はJava学習とWeb開発スキル向上に取り組んでいます。</p>
+</div>
 </section>
 
-<section id="skills">
-
-    <h2>Skills</h2>
-
-    <div class="card-grid">
-
-        <div class="card">
-
-            <h3>💻 Programming Languages</h3>
-
-            <p class="skill-description">
-                学習および開発経験のあるプログラミング言語
-            </p>
-
-            <div class="skill-tags">
-                <span>Python</span>
-                <span>Java</span>
-                <span>JavaScript</span>
-                <span>COBOL</span>
-                <span>C++</span>
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🌐 Web Technologies</h3>
-
-            <p class="skill-description">
-                Webサイト制作で利用している技術
-            </p>
-
-            <div class="skill-tags">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>Responsive Design</span>
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🔒 Security & IT</h3>
-
-            <p class="skill-description">
-                資格取得や学習を通して身につけた知識
-            </p>
-
-            <div class="skill-tags">
-                <span>Information Security</span>
-                <span>Networking</span>
-                <span>Database</span>
-                <span>Algorithms</span>
-                <span>System Development</span>
-            </div>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🛠 Tools</h3>
-
-            <p class="skill-description">
-                日常的に利用しているツール
-            </p>
-
-            <div class="skill-tags">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>VS Code</span>
-                <span>Excel 365</span>
-                <span>Word 2019</span>
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="fade">
+<div class="stats">
+<div><h3>7+</h3><p>Certifications</p></div>
+<div><h3>5</h3><p>Languages</p></div>
+<div><h3>2026</h3><p>Portfolio</p></div>
+</div>
 </section>
 
-<section id="certifications">
-
-    <h2>Certifications</h2>
-
-    <div class="timeline">
-
-        <div class="timeline-item">基本情報技術者試験</div>
-        <div class="timeline-item">情報セキュリティマネジメント試験</div>
-        <div class="timeline-item">Python3エンジニア認定基礎試験</div>
-        <div class="timeline-item">MOS Excel 365</div>
-        <div class="timeline-item">MOS Word 2019</div>
-        <div class="timeline-item">第二種電気工事士</div>
-        <div class="timeline-item">第一種運転免許</div>
-
-    </div>
-
+<section class="fade" id="skills">
+<h2>Skills</h2>
+<div class="card-grid">
+<div class="card"><h3>Programming</h3><div class="skill">Java<div class="bar"><div class="fill" style="width:70%"></div></div></div><div class="skill">Python<div class="bar"><div class="fill" style="width:80%"></div></div></div></div>
+<div class="card"><h3>Languages</h3><div class="tags"><span>JavaScript</span><span>COBOL</span><span>C++</span><span>HTML5</span><span>CSS3</span></div></div>
+</div>
 </section>
 
-<section id="hobbies">
-
-    <h2>Hobbies & Interests</h2>
-
-    <div class="card-grid">
-
-        <div class="card hobby">
-
-            <h3>📚 読書</h3>
-
-            <p>
-                ミステリー小説を中心に読書を楽しんでいます。
-                特に好きな作家はアガサ・クリスティー、綾辻行人、今村昌弘です。
-            </p>
-
-        </div>
-
-        <div class="card hobby">
-
-            <h3>⚽ サッカー観戦</h3>
-
-            <p>
-                プレミアリーグやラ・リーガなど海外リーグを中心に観戦しています。
-                ワールドカップや代表戦も毎回楽しみにしています。
-            </p>
-
-        </div>
-
-        <div class="card hobby">
-
-            <h3>🎬 映画鑑賞</h3>
-
-            <p>
-                主に洋画のSFやファンタジー作品を鑑賞しています。
-                ハリー・ポッターシリーズがきっかけで映画が好きになりました。
-            </p>
-
-        </div>
-
-        <div class="card hobby">
-
-            <h3>🎾 ソフトテニス</h3>
-
-            <p>
-                中学・高校の6年間取り組んでいました。
-                現在はプレーする機会が減りましたが、今でも好きなスポーツです。
-            </p>
-
-        </div>
-
-    </div>
-
+<section class="fade" id="projects">
+<h2>Projects</h2>
+<div class="card-grid">
+<div class="card"><h3>Portfolio Website</h3><p>レスポンシブ対応ポートフォリオ。</p></div>
+<div class="card"><h3>Java Learning</h3><p>Java学習コードや演習問題。</p></div>
+</div>
 </section>
 
-<section id="contact">
-
-    <h2>Contact</h2>
-
-    <div class="glass-card contact-card">
-
-        <p>
-            GitHubで学習記録や制作物を公開しています。
-        </p>
-
-        <a class="btn" href="https://github.com/KKW333" target="_blank">
-            GitHub Profile
-        </a>
-
-    </div>
-
+<section class="fade" id="certifications">
+<h2>Certifications</h2>
+<div class="tags">
+<span>基本情報技術者</span><span>情報セキュリティマネジメント</span><span>Python3エンジニア認定基礎</span>
+<span>MOS Excel 365</span><span>MOS Word 2019</span><span>第二種電気工事士</span><span>第一種運転免許</span>
+</div>
 </section>
 
-<footer>
-    <p>© 2026 @KKW333</p>
-</footer>
+<section class="fade" id="contact">
+<h2>Contact</h2>
+<div class="glass-card center">
+<p>GitHub Profile</p>
+<a class="btn" href="https://github.com/KKW333">GitHub</a>
+</div>
+</section>
 
+<script src="script.js"></script>
 </body>
 </html>
