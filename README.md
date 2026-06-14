@@ -1,157 +1,123 @@
 # @KKW333 Portfolio
 
-システムエンジニアとしての学習成果やスキル、資格情報をまとめたポートフォリオサイトです。
+エンジニア @KKW333 のポートフォリオサイトです。  
+GitHub Pages 上で公開することを前提とした、シンプルかつモダンな 1 ページ構成のサイトになっています。
 
-## 🌐 Website
-
-GitHub Pages
-
-https://kouta200033.github.io/kouta200033.github.io/
-
----
-
-## 👤 Profile
-
-**Name** : @KKW333
-
-**Occupation** : システムエンジニア
-
-IT分野に強い関心を持ち、継続的な学習と資格取得を通じて知識・技術の習得に取り組んでいます。
-
-現在はJavaを中心としたプログラミング学習を進めながら、Web技術やソフトウェア開発についても学習しています。
+- ガラスモーフィズム風デザイン
+- ブルー × パープル系のグラデーション
+- ダークテーマ対応（テーマ切り替えボタン）
+- スクロール時のフェードインアニメーション
+- 開発工程を表形式でわかりやすく表示
 
 ---
 
-## 💻 Skills
+## 技術スタック
 
-### Programming Languages
-
-- Java
-- Python
-- COBOL
-- SQL
-
-### Web Technologies
-
-- HTML5
-- CSS3
-
-### Database
-
-- PostgreSQL
-- MySQL
-
-### Tools
-
-- Git
+- **HTML5**
+- **CSS3**
+  - ガラスモーフィズム風カード
+  - レスポンシブ対応
+  - ダークテーマ（`data-theme="dark"`）
+- **JavaScript**
+  - テーマ切り替え（ライト / ダーク）
+  - スクロールアニメーション（`.reveal` → `.visible`）
 
 ---
 
-## 📜 Certifications
+## ページ構成
 
-### IT
+### ヘッダー / ナビゲーション
 
-- Microsoft Office Specialist (Excel)
-- Microsoft Office Specialist (Word)
-- Python3エンジニア認定基礎試験
-- 情報セキュリティマネジメント試験
-- 基本情報技術者試験
+- 固定ヘッダー（`header.site-header`）
+- ナビゲーションリンク：
+  - 自己紹介（`#about`）
+  - スキル（`#skills`）
+  - 経験のある開発工程（`#process`）
+  - 取得資格（`#licenses-it`）
+  - 趣味（`#hobby`）
+  - Contact（`#contact`）
+- テーマ切り替えボタン（`#themeBtn`）
+  - クリックでライト / ダークテーマを切り替え
+  - 状態は `localStorage` に保存
 
-### Others
+### Hero セクション（トップ）
 
-- 第一種運転免許
-- 第二種電気工事士
+- 名前：`@KKW333`
+- 職種：System Engineer
+- 概要：
+  - エンジニア歴 5 年目
+  - Web 技術やソフトウェア開発を継続的に学習
+- ボタン：
+  - `Profile`（自己紹介セクションへ）
+  - `Contact`（連絡先セクションへ）
 
----
+### 自己紹介（`#about`）
 
-## 🎯 Interests
+- 見出し：自己紹介 / 学び続けるエンジニアとして
+- 内容：
+  - IT 分野への強い関心
+  - 継続的な学習と資格取得による知識・技術向上
+  - Java を中心としたプログラミング学習
+  - Web 技術・ソフトウェア開発全般の理解を深めていること
+  - AI 技術も取り入れた効率的・実践的な学習
 
-### 📚 Reading
+### スキル（`#skills`）
 
-ミステリー小説を中心に読書を楽しんでいます。
+- 見出し：スキル / 言語・ツール
+- グリッド表示（`.skill-grid`）
+- 主なスキル：
+  - Java
+  - Python
+  - COBOL
+  - EASY
+  - HTML/CSS
+  - PostgreSQL
+  - MySQL
+  - WebPerFormer
 
-好きな作家
+### 経験のある開発工程（`#process`）
 
-- アガサ・クリスティー
-- 綾辻行人
-- 今村昌弘
+- 見出し：経験のある開発工程 / 担当した工程と経験レベル
+- 表形式（`.process-table`）で表示
+- 項目：
+  - 要件定義  
+    - 顧客ヒアリング、業務整理、要件定義書作成  
+    - 経験度：★★★☆☆
+  - 基本設計  
+    - 画面設計、機能設計、ジョブネット設計  
+    - 経験度：★★★★☆
+  - 詳細設計  
+    - クラス設計、処理フロー、DBテーブル設計  
+    - 経験度：★★★★☆
+  - 製造  
+    - COBOL・Java・ローコードツールを用いた開発  
+    - 経験度：★★★★★
+  - 単体試験  
+    - テストケース作成、試験実施、品質確認  
+    - 経験度：★★★★☆
+  - 結合・総合試験  
+    - 連携動作確認、障害調査、改修対応  
+    - 経験度：★★★☆☆
+  - リリース作業  
+    - リリース準備、品質評価、本番確認  
+    - 経験度：★★★★☆
 
-### ⚽ Football
+### 取得資格（`#licenses-it`）
 
-主に海外リーグを観戦しています。
+- 見出し：取得資格 / 学習の軌跡
+- タイムライン形式（`.timeline`）
+- 主な資格：
+  - Microsoft Office Specialist（Excel・Word）
+  - Python3エンジニア認定基礎試験
+  - 情報セキュリティマネジメント試験
+  - 基本情報技術者試験
+  - 第二種電気工事士
 
-- Premier League
-- La Liga
-- FIFA World Cup
+### 趣味・特技（`#hobby`）
 
-### 🎬 Movies
-
-洋画のSF・ファンタジー作品を中心に鑑賞しています。
-
-### 🎾 Soft Tennis
-
-中学・高校の6年間、部活動として取り組みました。
-
----
-
-## 📂 Repository Structure
-
-```text
-.
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── assets
-    ├── images
-    └── icons
-```
-
----
-
-## 🚀 Features
-
-- レスポンシブデザイン
-- ダークモード切替
-- スムーズスクロール
-- スクロールアニメーション
-- モダンUI
-- GitHub Pages対応
-
----
-
-## 🛠 Development Environment
-
-| Category | Technology |
-|----------|------------|
-| Frontend | HTML5 |
-| Styling | CSS3 |
-| Script | JavaScript |
-| Version Control | Git |
-| Hosting | GitHub Pages |
-
----
-
-## 📧 Contact
-
-GitHub
-
-https://github.com/kouta200033
-
-Email
-
-<kouta47406552@gmail.com>
-
----
-
-## 📈 Future Goals
-
-- Java Silver取得
-- 応用情報技術者試験合格
-- Webアプリケーション開発スキル向上
-- クラウド技術（AWS）の習得
-- 個人開発プロジェクトの拡充
-
----
-
-© 2026 @KKW333
+- 見出し：趣味・特技 / インプットとリフレッシュ
+- カード形式（`.hobby-grid`）
+- 主な内容：
+  - 読書（ミステリー小説、アガサ・クリスティ、綾辻行人、今村昌弘 など）
+  - サッカー観戦（海外リーグ、プレミアリーグ、ラ・リーガ、W杯）
+  - 映画鑑賞（洋画、ロード・オブ・ザ・リング、ハリー・ポッ
