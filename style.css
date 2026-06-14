@@ -1,6 +1,7 @@
 :root{
-    --main:#2563eb;
-    --dark:#111827;
+    --primary:#2563eb;
+    --secondary:#60a5fa;
+    --dark:#0f172a;
     --light:#f8fafc;
 }
 
@@ -15,184 +16,213 @@ html{
 }
 
 body{
-    font-family:
-    "Segoe UI",
-    "Yu Gothic",
-    sans-serif;
-
+    font-family:'Poppins',sans-serif;
     background:var(--light);
     color:#333;
 }
 
 nav{
     position:fixed;
-    width:100%;
     top:0;
-
+    width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    background:rgba(17,24,39,.95);
-
-    padding:15px 40px;
-
+    padding:20px 60px;
+    background:rgba(15,23,42,.95);
+    backdrop-filter:blur(10px);
     z-index:1000;
 }
 
 .logo{
     color:white;
-    font-weight:bold;
-    font-size:1.3rem;
+    font-size:1.4rem;
+    font-weight:700;
 }
 
 nav ul{
-    display:flex;
     list-style:none;
+    display:flex;
     gap:25px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--secondary);
 }
 
 .hero{
     height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
 
     background:
     linear-gradient(
-        135deg,
+        -45deg,
+        #1e3a8a,
         #2563eb,
-        #1e40af
+        #60a5fa,
+        #93c5fd
     );
 
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
     color:white;
 }
 
-.avatar{
-    width:160px;
-    height:160px;
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 
+.profile-circle{
+    width:180px;
+    height:180px;
     border-radius:50%;
-
     background:white;
-    color:var(--main);
+    color:var(--primary);
+    font-size:4rem;
+    font-weight:bold;
 
     display:flex;
     justify-content:center;
     align-items:center;
-
-    font-size:3rem;
-    font-weight:bold;
 
     margin:auto;
 }
 
 .hero h1{
     margin-top:20px;
-    font-size:3rem;
+    font-size:4rem;
 }
 
-.subtitle{
+.hero-subtitle{
     font-size:1.4rem;
-    margin-top:10px;
+    margin:15px 0;
+}
+
+.hero-description{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
 }
 
 .btn{
     display:inline-block;
-
-    margin-top:20px;
-
-    padding:12px 25px;
-
+    margin-top:25px;
+    padding:14px 28px;
     border-radius:30px;
-
     text-decoration:none;
-
     background:white;
-    color:var(--main);
+    color:var(--primary);
+    font-weight:600;
+    transition:.3s;
+}
 
-    font-weight:bold;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
 section{
-    max-width:1100px;
-
+    max-width:1200px;
     margin:auto;
-
     padding:100px 20px;
 }
 
 h2{
     text-align:center;
-    margin-bottom:40px;
+    font-size:2.2rem;
+    margin-bottom:50px;
+    color:var(--dark);
+}
+
+.glass-card{
+    background:rgba(255,255,255,.7);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:40px;
+    line-height:2;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
 }
 
 .card{
     background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-    padding:25px;
-
-    border-radius:16px;
-
-    box-shadow:
-    0 8px 20px rgba(0,0,0,.08);
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(37,99,235,.2);
 }
 
 .card ul{
-    margin-top:10px;
     padding-left:20px;
+    margin-top:15px;
 }
 
 .timeline{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
     justify-content:center;
+    gap:15px;
 }
 
 .timeline-item{
-    background:var(--main);
+    background:var(--primary);
     color:white;
-
     padding:15px 25px;
+    border-radius:999px;
+}
 
-    border-radius:30px;
+.hobby p{
+    margin-top:15px;
+    line-height:1.7;
 }
 
 footer{
     background:var(--dark);
     color:white;
-
     text-align:center;
-
-    padding:30px;
+    padding:40px;
 }
 
 @media(max-width:768px){
 
     nav{
         flex-direction:column;
-        gap:10px;
+        padding:15px;
+    }
+
+    nav ul{
+        margin-top:10px;
+        flex-wrap:wrap;
+        justify-content:center;
     }
 
     .hero h1{
-        font-size:2rem;
+        font-size:2.5rem;
+    }
+
+    .profile-circle{
+        width:130px;
+        height:130px;
+        font-size:3rem;
     }
 }
