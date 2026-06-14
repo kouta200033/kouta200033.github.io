@@ -44,139 +44,90 @@ body {
 }
 
 /* ================================
-   ヘッダー
+   ヘッダー（ガラス + スクロール縮小）
 ================================ */
-.site-header {
+.glass-header {
   position: fixed;
   width: 100%;
   top: 0;
-  backdrop-filter: var(--blur);
-  background: rgba(255, 255, 255, 0.15);
-  padding: 10px 0;
-  z-index: 100;
+  backdrop-filter: blur(18px) saturate(180%);
+  background: rgba(255, 255, 255, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: 0.35s ease;
+  z-index: 1000;
 }
 
-[data-theme="dark"] .site-header {
-  background: rgba(15, 23, 42, 0.4);
+[data-theme="dark"] .glass-header {
+  background: rgba(15, 23, 42, 0.35);
 }
 
-.navbar {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
+.glass-header.scrolled {
+  padding: 4px 0;
+  background: rgba(255, 255, 255, 0.08);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
 }
 
-.logo {
-  font-size: 1.3rem;
+/* ロゴをネオンサイン風に */
+.logo.neon {
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--accent);
-  letter-spacing: 0.05em;
+  text-shadow: 0 0 8px var(--accent2), 0 0 16px var(--accent2);
+  transition: 0.3s ease;
 }
 
-.nav-links {
-  display: flex;
-  gap: 28px;
-  list-style: none;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  transition: var(--transition);
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: var(--accent2);
-  transition: width var(--transition);
-}
-
-.nav-links a:hover {
-  color: var(--accent2);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* テーマボタン */
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: var(--text);
-  transition: var(--transition);
-}
-
-.theme-toggle:hover {
-  transform: scale(1.15);
+.logo.neon:hover {
+  text-shadow: 0 0 12px var(--accent2), 0 0 24px var(--accent2);
+  transform: scale(1.05);
 }
 
 /* ================================
-   HERO セクション
+   HERO（背景を立体的に）
 ================================ */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--bg-gradient);
-  color: white;
-  padding: 0 20px;
+.hero-enhanced {
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-content {
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.15);
-  padding: 50px 60px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  text-align: center;
-  animation: fadeUp 1.2s ease forwards;
+.hero-enhanced::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+  top: -120px;
+  left: -120px;
+  filter: blur(60px);
+  opacity: 0.7;
 }
 
-.hero-label {
-  font-size: 0.9rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  opacity: 0.9;
+.hero-enhanced::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
+  bottom: -150px;
+  right: -150px;
+  filter: blur(70px);
+  opacity: 0.6;
 }
 
-.hero h1 {
-  font-size: 4rem;
+/* タイトルにグロー効果 */
+.hero-title-glow {
+  font-size: 4.2rem;
   font-weight: 700;
-  margin-top: 10px;
+  text-shadow: 0 0 12px rgba(255,255,255,0.6), 0 0 28px var(--accent2);
+  animation: glowPulse 3s ease-in-out infinite;
 }
 
-.hero-subtitle {
-  font-size: 1.3rem;
-  margin-top: 10px;
-  opacity: 0.9;
-}
-
-.hero-text {
-  margin-top: 15px;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-.hero-actions {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 12px rgba(255,255,255,0.6), 0 0 28px var(--accent2);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255,255,255,0.9), 0 0 40px var(--accent2);
+  }
 }
 
 /* ================================
