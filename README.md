@@ -1,67 +1,78 @@
-# 自己紹介ホームページ
+# Kota Watanabe Portfolio
 
-このリポジトリは、HTMLとCSSで作成した自己紹介ホームページです。
+Javaを中心に学習している渡邉康太のポートフォリオサイトです。
 
-## 概要
+## Overview
 
-プロフィール、趣味、スキル、お問い合わせ先を掲載しています。
+このサイトでは以下の内容を紹介しています。
 
-## 使用技術
+- 自己紹介
+- 学習中の技術
+- Javaスキル
+- 学習履歴
+- GitHub活動
+
+## Technologies
 
 - HTML5
 - CSS3
+- Git
+- GitHub
 
-## ファイル構成
+## Learning Topics
 
-```text
-my-profile-site/
-├─ index.html
-├─ style.css
-└─ profile.jpg
-```
+### Java
 
-## 表示方法
+- オブジェクト指向
+- 継承
+- ポリモーフィズム
+- 例外処理
+- コレクション
 
-1. このリポジトリをクローンします。
+### Web
 
-```bash
-git clone https://github.com/ユーザー名/リポジトリ名.git
-```
+- HTML
+- CSS
+- レスポンシブデザイン
 
-2. フォルダへ移動します。
+### Tools
 
-```bash
-cd リポジトリ名
-```
+- Git
+- GitHub
+- VS Code
+- Eclipse
 
-3. `index.html` をブラウザで開きます。
-
-## カスタマイズ
-
-以下の内容を自由に変更できます。
-
-- 氏名
-- プロフィール
-- 趣味
-- スキル
-- プロフィール画像
-- お問い合わせ先
-
-## GitHub Pagesで公開
-
-1. GitHubへプッシュ
-2. Repository の **Settings**
-3. **Pages**
-4. Source を **Deploy from a branch** に設定
-5. Branch を **main** に設定
-6. Save
-
-数分後に以下のURLで公開されます。
+## Project Structure
 
 ```text
-https://ユーザー名.github.io/リポジトリ名/
+portfolio/
+├── index.html
+├── style.css
+└── README.md
 ```
 
-## ライセンス
+## Run Locally
 
-MIT License
+```bash
+git clone https://github.com/your-account/portfolio.git
+cd portfolio
+```
+
+ブラウザで
+
+```text
+index.html
+```
+
+を開くだけで閲覧できます。
+
+## Future Goals
+
+- Spring Boot学習
+- Webアプリケーション開発
+- GitHubへの成果物公開
+- ポートフォリオ拡充
+
+## Author
+
+Kota Watanabe
