@@ -1,8 +1,9 @@
 :root{
     --primary:#2563eb;
-    --secondary:#60a5fa;
+    --primary-light:#60a5fa;
+    --primary-dark:#1e3a8a;
+    --bg:#f8fbff;
     --dark:#0f172a;
-    --light:#f8fafc;
 }
 
 *{
@@ -16,22 +17,25 @@ html{
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:var(--light);
-    color:#333;
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:#1f2937;
 }
 
 nav{
     position:fixed;
-    top:0;
     width:100%;
+    top:0;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:20px 60px;
-    background:rgba(15,23,42,.95);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+
+    background:rgba(15,23,42,.92);
+    backdrop-filter:blur(12px);
 }
 
 .logo{
@@ -49,86 +53,64 @@ nav ul{
 nav a{
     color:white;
     text-decoration:none;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:var(--secondary);
 }
 
 .hero{
     height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
+    color:white;
 
     background:
     linear-gradient(
-        -45deg,
+        135deg,
         #1e3a8a,
         #2563eb,
-        #60a5fa,
-        #93c5fd
+        #60a5fa
     );
-
-    background-size:400% 400%;
-    animation:gradientMove 12s ease infinite;
-    color:white;
 }
 
-@keyframes gradientMove{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
+.hero-content{
+    max-width:800px;
 }
 
-.profile-circle{
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    background:white;
-    color:var(--primary);
-    font-size:4rem;
-    font-weight:bold;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    margin:auto;
+.tag{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:999px;
+    background:rgba(255,255,255,.2);
 }
 
 .hero h1{
-    margin-top:20px;
-    font-size:4rem;
+    font-size:5rem;
+    margin:20px 0;
 }
 
-.hero-subtitle{
-    font-size:1.4rem;
-    margin:15px 0;
+.subtitle{
+    font-size:1.5rem;
+    margin-bottom:20px;
 }
 
-.hero-description{
-    max-width:700px;
-    margin:auto;
+.hero-text{
     line-height:1.8;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
+    margin-top:30px;
     padding:14px 28px;
-    border-radius:30px;
-    text-decoration:none;
+
+    border-radius:999px;
+
     background:white;
     color:var(--primary);
-    font-weight:600;
-    transition:.3s;
-}
 
-.btn:hover{
-    transform:translateY(-3px);
+    text-decoration:none;
+    font-weight:600;
 }
 
 section{
@@ -139,21 +121,23 @@ section{
 
 h2{
     text-align:center;
-    font-size:2.2rem;
     margin-bottom:50px;
-    color:var(--dark);
+    font-size:2.4rem;
 }
 
 .glass-card{
-    background:rgba(255,255,255,.7);
-    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+
     border-radius:20px;
     padding:40px;
+
     line-height:2;
+
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-.grid{
+.card-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:25px;
@@ -163,37 +147,34 @@ h2{
     background:white;
     border-radius:20px;
     padding:30px;
+
     box-shadow:0 10px 25px rgba(0,0,0,.08);
+
     transition:.3s;
 }
 
 .card:hover{
     transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(37,99,235,.2);
 }
 
 .card ul{
-    padding-left:20px;
     margin-top:15px;
+    padding-left:20px;
 }
 
 .timeline{
     display:flex;
     flex-wrap:wrap;
-    justify-content:center;
     gap:15px;
+    justify-content:center;
 }
 
 .timeline-item{
     background:var(--primary);
     color:white;
+
     padding:15px 25px;
     border-radius:999px;
-}
-
-.hobby p{
-    margin-top:15px;
-    line-height:1.7;
 }
 
 footer{
@@ -217,12 +198,6 @@ footer{
     }
 
     .hero h1{
-        font-size:2.5rem;
-    }
-
-    .profile-circle{
-        width:130px;
-        height:130px;
         font-size:3rem;
     }
 }
