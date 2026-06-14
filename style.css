@@ -54,6 +54,7 @@ body {
   background: rgba(255, 255, 255, 0.12);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   transition: 0.35s ease;
+  padding: 10px 0;
   z-index: 1000;
 }
 
@@ -65,6 +66,15 @@ body {
   padding: 4px 0;
   background: rgba(255, 255, 255, 0.08);
   border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
 }
 
 /* ロゴをネオンサイン風に */
@@ -81,15 +91,69 @@ body {
   transform: scale(1.05);
 }
 
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent2);
+  transition: width var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--accent2);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* テーマボタン */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.15);
+}
+
 /* ================================
    HERO（背景を立体的に）
 ================================ */
-.hero-enhanced {
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+  color: white;
+  padding: 0 20px;
   position: relative;
   overflow: hidden;
 }
 
-.hero-enhanced::before {
+.hero::before {
   content: "";
   position: absolute;
   width: 450px;
@@ -101,7 +165,7 @@ body {
   opacity: 0.7;
 }
 
-.hero-enhanced::after {
+.hero::after {
   content: "";
   position: absolute;
   width: 500px;
@@ -111,6 +175,23 @@ body {
   right: -150px;
   filter: blur(70px);
   opacity: 0.6;
+}
+
+.hero-content {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px 60px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-label {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.9;
 }
 
 /* タイトルにグロー効果 */
@@ -130,8 +211,27 @@ body {
   }
 }
 
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.hero-text {
+  margin-top: 15px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.hero-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
 /* ================================
-   ボタン（視認性改善版）
+   ボタン
 ================================ */
 .btn {
   padding: 12px 28px;
@@ -143,7 +243,6 @@ body {
   display: inline-block;
 }
 
-/* 白背景のメインボタン */
 .primary-btn {
   background: white;
   color: var(--accent);
@@ -156,7 +255,6 @@ body {
   box-shadow: 0 0 12px var(--accent2);
 }
 
-/* 透明背景のゴーストボタン */
 .ghost-btn {
   background: transparent;
   color: white;
@@ -169,7 +267,6 @@ body {
   color: white;
   box-shadow: 0 0 12px var(--accent2);
 }
-
 
 /* ================================
    セクション共通
@@ -276,11 +373,8 @@ body {
   letter-spacing: 1px;
   color: var(--accent2);
 }
-/* ================================
-   開発工程：PC表示の視認性向上
-================================ */
 
-/* セクションタイトルを大きく */
+/* PC表示の視認性向上 */
 #process .section-header h2 {
   font-size: 2.4rem;
 }
@@ -289,30 +383,25 @@ body {
   font-size: 1.2rem;
 }
 
-/* テーブル全体の文字サイズアップ */
 .process-table th,
 .process-table td {
   font-size: 1.05rem;
   padding: 20px 24px;
 }
 
-/* 行の高さを広げて読みやすく */
 .process-table tr {
   height: 60px;
 }
 
-/* 経験度の★を大きく */
 .level {
   font-size: 1.2rem;
 }
 
-/* PC画面だけ適用（スマホはそのまま） */
 @media (min-width: 1024px) {
   .process-table {
     font-size: 1.1rem;
   }
 }
-
 
 /* ================================
    タイムライン
@@ -414,7 +503,7 @@ body {
     display: none;
   }
 
-  .hero h1 {
+  .hero-title-glow {
     font-size: 3rem;
   }
 
@@ -424,7 +513,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
+  .hero-title-glow {
     font-size: 2.4rem;
   }
 
