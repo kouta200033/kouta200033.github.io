@@ -11,14 +11,22 @@
 <body>
 <header class="site-header glass-header">
   <nav class="navbar" aria-label="メインナビゲーション">
-    <a href="#top" class="logo neon">@KKW333</a>
 
-    <!-- ハンバーガーメニュー -->
+    <!-- ハンバーガーメニュー（左） -->
     <button class="nav-toggle" aria-label="メニューを開閉" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </button>
+
+    <!-- ロゴ（中央寄せ） -->
+    <a href="#top" class="logo neon">@KKW333</a>
+
+    <!-- テーマ切り替え（右） -->
+    <button id="themeBtn" class="theme-toggle" aria-label="テーマ切り替え">
+      🌙
+    </button>
+
 
     <!-- スマホ対応ナビ -->
     <ul class="nav-links">
@@ -28,10 +36,6 @@
       <li><a href="#hobby">趣味・特技</a></li>
       <li><a href="#contact">連絡先</a></li>
     </ul>
-
-    <button id="themeBtn" class="theme-toggle" aria-label="テーマ切り替え">
-      🌙
-    </button>
     
   </nav>
 </header>
@@ -257,6 +261,6 @@
     <p>© 2026 @KKW333</p>
   </footer>
 
-  <script src="script.js"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>

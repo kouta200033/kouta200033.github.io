@@ -116,12 +116,8 @@ body {
   transition: width var(--transition);
 }
 
-/*.nav-links a:hover {
+.nav-links a:hover {
   color: var(--accent2);
-}*/
-
-.nav-links a {
-  color: #ffffff;   /* ← 好きな色に変更 */
 }
 
 .nav-links a:hover::after {
@@ -529,7 +525,7 @@ body {
   }
 }
 /* ================================
-   ハンバーガーメニュー
+   ハンバーガーメニュー（左配置）
 ================================ */
 .nav-toggle {
   display: none;
@@ -538,7 +534,10 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1100;
+  z-index: 3000;
+  position: absolute;
+  left: 20px;
+  top: 18px;
 }
 
 .nav-toggle span {
@@ -549,7 +548,7 @@ body {
   transition: 0.3s ease;
 }
 
-/* 開いた時のアニメーション */
+/* 開閉アニメーション */
 .nav-toggle.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -561,24 +560,30 @@ body {
 }
 
 /* ================================
-   スマホ用ナビゲーション
+   スマホ用ナビ（左側スライド）
 ================================ */
 @media (max-width: 768px) {
+
   .nav-toggle {
     display: flex;
-    position: absolute;
-    left: 20px;   /* ← 左端に配置 */
-    top: 18px;
   }
 
-  /* ロゴは中央寄せにしたい場合 */
   .logo.neon {
-    margin-left: 60px; /* ハンバーガーと重ならないように調整 */
+    margin: auto;
+    text-align: center;
   }
+
+  .theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    z-index: 3000;
+  }
+
   .nav-links {
     position: absolute;
     top: 70px;
-    right: 20px;
+    left: 20px; /* ← 左側に配置 */
     width: 70%;
     max-width: 260px;
     background: var(--card);
@@ -591,6 +596,7 @@ body {
     flex-direction: column;
     gap: 18px;
     animation: fadeMenu 0.3s ease forwards;
+    z-index: 2000;
   }
 
   .nav-links.open {
@@ -608,11 +614,21 @@ body {
     }
   }
 
+  /* メニュー文字色（スマホ） */
   .nav-links a {
+    color: var(--accent); /* ← 好きな色に変更可能 */
     font-size: 1.1rem;
-    padding: 8px 0;
   }
 }
+
+/* PC メニュー色変更 */
+.nav-links a {
+  color: var(--text); /* ← 好きな色に変更可能 */
+}
+.nav-links a:hover {
+  color: var(--accent2);
+}
+
 
 /* ================================
    ロゴアニメーション（ネオン点滅 + 光の走り）
