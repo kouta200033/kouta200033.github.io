@@ -521,6 +521,88 @@ body {
     padding: 10px 22px;
   }
 }
+/* ================================
+   ハンバーガーメニュー
+================================ */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  background: var(--text);
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+/* 開いた時のアニメーション */
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ================================
+   スマホ用ナビゲーション
+================================ */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 70%;
+    max-width: 260px;
+    background: var(--card);
+    backdrop-filter: var(--blur);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 20px;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+    animation: fadeMenu 0.3s ease forwards;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  @keyframes fadeMenu {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+
+  .theme-toggle {
+    margin-left: 10px;
+  }
+}
 
 /* ================================
    ロゴアニメーション（ネオン点滅 + 光の走り）
