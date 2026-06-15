@@ -125,14 +125,18 @@ body {
 }
 
 /* テーマボタン */
-.theme-toggle {
+/*.theme-toggle {
   background: none;
   border: none;
   font-size: 22px;
   cursor: pointer;
   color: var(--text);
   transition: var(--transition);
-}
+}*/
+.theme-toggle {
+  position: relative;
+  z-index: 3000;
+  }
 
 .theme-toggle:hover {
   transform: scale(1.15);
@@ -597,11 +601,6 @@ body {
   .nav-links a {
     font-size: 1.1rem;
     padding: 8px 0;
-  }
-
-.theme-toggle {
-  position: relative;
-  z-index: 3000;
   }
 }
 
