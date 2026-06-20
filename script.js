@@ -64,3 +64,19 @@
   });
 })();
 
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const overlay = document.querySelector('.overlay');
+
+navToggle.addEventListener('click', () => {
+  navToggle.classList.toggle('active');
+  navLinks.classList.toggle('open');
+  overlay.classList.toggle('show');
+});
+
+// オーバーレイをクリックしたら閉じる
+overlay.addEventListener('click', () => {
+  navToggle.classList.remove('active');
+  navLinks.classList.remove('open');
+  overlay.classList.remove('show');
+});
